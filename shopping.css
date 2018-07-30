@@ -1,0 +1,52 @@
+#div1
+{
+ width: 65%;
+ height: 100%;
+ position: absolute;
+ background-color: #0c7860;
+ overflow: auto;
+}
+#div2
+{
+    border-left: solid 1px #000000;
+    background-color: #7BBF6A;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    margin-left: 65%;
+    overflow: auto;
+}
+table, th, td 
+{
+    margin:10px 0;
+    padding:2px 4px;
+    font:15px Verdana;
+    width: 45%;
+    
+}
+#data
+{
+    width: 35%;
+    height: 6%;
+    font-weight: bold;
+    font-size: 17px;
+}
+#myButton1, #myButton2, #myButton3
+{
+    height: 6%;
+    font-weight: bold;
+}
+#myButton4
+{
+    font-weight: bold;
+    margin-right: 10%;
+    width: 15%;
+    height: 6%;
+    margin-top: 70%;
+    margin-left: 50%;
+}
+
+#payment
+{
+    margin-top: 20%;   
+}

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Online Grocery Shopping
+        </title>
+        <link type="text/css" rel="stylesheet" href="shopping.css">
+    </head>
+    <body>
+        <div id="div1">
+            <center>
+                <div><img src="download.jpg" height="25%" width="35%" align="center"></div> <br /> <br />
+                <input type="text" id="data" placeholder="Search your category">&nbsp; &nbsp; &nbsp;
+                <input type="button" id="myButton1" onclick="Search()"  value="Search Data" />
+                <p id="showData"> </p>
+                <input type="button" id="myButton2" onclick="Reset()"  value="Reset" />
+                <input type="button" id="myButton3" onclick="Add()"  value="  Add  " />
+                </center>
+        </div>
+        <div id="div2">
+            <center>
+                <br /> <br /> <br /> <br /> <br />
+                    <table border="1" id="add_data"></table>
+                    <a href="payment.html">
+                        <Button type="submit" id="myButton4" onclick="Checkout()">Checkout</Button>
+                     </a>
+            </center>
+        </div>     
+    </body>
+    <script src="shopping.js">  
+    </script>
+</html>
