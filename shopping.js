@@ -213,8 +213,9 @@ var shopping_dairy=
 var arr1=shopping_fruit.concat(shopping_vegetable);
 var arr2=arr1.concat(shopping_spices);
 var arr3=arr2.concat(shopping_dairy);
-var checkout_items="<table border='1'><tr><th>Name</th><th>Category</th><th>Quantity</th><th>Price</th></tr>";
+
  var add_items="<tr id='head'><th>Name</th><th>Quantity</th></tr>";
+ var checkout_items="<tr><th>Name</th><th>Category</th><th>Quantity</th><th>Price</th></tr>";
 function Search()
 {
 var search1=document.getElementById('data').value;
@@ -244,14 +245,13 @@ function Reset()
         arr3[reset_index].qty=0;
     }
 }
-var checkout_items="";
 var total=0;
 var sum_quantity=0;
 function Add()
 {
     for(let add_index=0;add_index<arr3.length;add_index++)
     {
-        if(document.getElementById(arr3[add_index].name)!=null){
+        if(document.getElementById(arr3[add_index].name)!=null ){
         arr3[add_index].qty=document.getElementById(arr3[add_index].name).value;
         if(arr3[add_index].qty>0)
         {
@@ -260,15 +260,15 @@ function Add()
             total+= arr3[add_index].qty * arr3[add_index].price;
         }}
     }
-    checkout_items+="<tr><td colspan='3'>Total</td><td>"+total+"</td></tr>";
-    
-    document.getElementById("add_data").innerHTML=add_items;
-    
+   
+    document.getElementById("add_data").innerHTML=add_items;  
 }
 
 function Checkout()
 {
+  checkout_items+="<tr><td colspan='3'>Total</td><td>"+total+"</td></tr>";
    var amt;
+   var billable_items;
    sessionStorage.setItem("billable_items", checkout_items);
    sessionStorage.setItem("amt", total);
 }
